@@ -10,14 +10,12 @@ const Button: FC<ButtonProps> = ({
   className,
   ...divProps
 }) => {
-  const divStyles = componentStyles.generateButtonStyles(divProps);
+  const divStyle = componentStyles.generateButtonStyles(divProps);
 
   useContext(ThemeContext);
 
   return (
-    <Component className={cx(divStyles.Button, className)}>
-      {children}
-    </Component>
+    <Component className={cx(divStyle.Button, className)}>{children}</Component>
   );
 };
 
